@@ -11,8 +11,11 @@ import XCTest
 
 class SwiftyLibTests: XCTestCase {
 
+    var swiftyLib: SwiftyLib!
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        swiftyLib = SwiftyLib()
     }
 
     override func tearDown() {
@@ -30,5 +33,13 @@ class SwiftyLibTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testAdd() {
+         XCTAssertEqual(swiftyLib.add(a: 1, b: 1), 2)
+     }
+     
+     func testSub() {
+         XCTAssertEqual(swiftyLib.sub(a: 2, b: 1), 1)
+     }
 
 }
